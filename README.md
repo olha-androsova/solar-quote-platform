@@ -53,6 +53,7 @@ npm run dev
 Create `backend/.env`:
 ```
 SECRET_KEY=your-secret-key
+DEBUG=True
 ```
 
 ## 🧪 Tests
