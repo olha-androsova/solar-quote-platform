@@ -1,0 +1,79 @@
+# =========================
+# Python / Django (backend)
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+backend/.venv/
+venv/
+env/
+ENV/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+*.sqlite3
+local_settings.py
+
+# Static & media (backend only)
+backend/staticfiles/
+backend/media/
+backend/uploads/
+
+# Environment variables
+backend/.env
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Node / React (frontend)
+# =========================
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# =========================
+# Build / misc
+# =========================
+
+dist/
+build/
+*.egg-info/
+
+# =========================
+# Test / coverage
+# =========================
+
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+
+# =========================
+# IDE / Editor
+# =========================
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

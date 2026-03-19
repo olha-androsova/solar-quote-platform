@@ -1,0 +1,399 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+  background: #f4f4f1;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f4f4f1;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.7), transparent 35%),
+    #f4f4f1;
+  color: #111827;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+button,
+input {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* Header */
+
+.app-header {
+  padding: 20px 0 8px;
+  background: transparent;
+}
+
+.header-content {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.header-content nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-content nav a {
+  font-weight: 500;
+  color: #374151;
+}
+
+.header-content nav a:hover {
+  color: #111827;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/* Page */
+
+.page-content {
+  padding: 40px 0 72px;
+}
+
+.hero {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.hero h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  margin: 0 auto;
+  max-width: 620px;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.hero-small {
+  margin-bottom: 28px;
+  text-align: left;
+  max-width: none;
+}
+
+.hero-small h2 {
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
+
+.hero-small p {
+  margin: 0;
+  max-width: none;
+}
+
+/* Layout */
+
+.page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Cards */
+
+.card,
+.quote-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  padding: 32px;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow:
+    0 10px 30px rgba(17, 24, 39, 0.05),
+    0 2px 10px rgba(17, 24, 39, 0.03);
+}
+
+.card h2,
+.quote-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.card p {
+  margin-top: 0;
+  color: #4b5563;
+}
+
+/* Form */
+
+.quote-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.quote-form label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: -4px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  background: #f9fafb;
+  color: #111827;
+  outline: none;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:hover {
+  border-color: #c4cad4;
+}
+
+input:focus {
+  border-color: #d100c9;
+  box-shadow: 0 0 0 4px rgba(209, 0, 201, 0.1);
+  background: #ffffff;
+}
+
+/* Buttons */
+
+button {
+  margin-top: 12px;
+  border: none;
+  border-radius: 999px;
+  padding: 15px 22px;
+  background: linear-gradient(90deg, #ff5a36 0%, #d100c9 100%);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(209, 0, 201, 0.18);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(209, 0, 201, 0.24);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Savings */
+
+.savings-box {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff3eb 0%, #f5e8ff 100%);
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.savings-box span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.savings-box strong {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+/* Messages */
+
+.success-message,
+.error-message,
+.field-error {
+  font-size: 0.92rem;
+}
+
+.success-message {
+  margin: 8px 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #ecfdf3;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.error-message {
+  margin: 8px 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.field-error {
+  margin: -6px 0 2px;
+  color: #b91c1c;
+}
+
+/* Dashboard */
+
+.quote-list {
+  display: grid;
+  gap: 18px;
+}
+
+.quote-card {
+  padding: 26px 28px;
+}
+
+.quote-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.quote-card p {
+  margin: 6px 0;
+  color: #4b5563;
+}
+
+.quote-card p strong {
+  color: #111827;
+}
+
+.quote-card:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 30px rgba(17, 24, 39, 0.07),
+    0 4px 12px rgba(17, 24, 39, 0.04);
+}
+
+/* Optional helpers if you want to use them later */
+
+.muted {
+  color: #6b7280;
+}
+
+.section-title {
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 20px, 1120px);
+  }
+
+  .app-header {
+    padding-top: 12px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px;
+    min-height: auto;
+  }
+
+  .header-content nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-content {
+    padding: 28px 0 56px;
+  }
+
+  .card,
+  .quote-card {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-small h2 {
+    font-size: 1.8rem;
+  }
+}
